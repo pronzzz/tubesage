@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #595959;
+  --color-grey-olive: #808f85;
+  --color-celadon: #91c499;
+  --color-linen: #f2e9dc;
+  --color-lemon-lime: #cfd11a;
+
+  --font-zen: "Zen Dots", sans-serif;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--color-charcoal);
+  color: var(--color-linen);
+  min-height: 100vh;
+}
+
+.font-zen {
+  font-family: "Zen Dots", sans-serif !important;
+}

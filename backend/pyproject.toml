@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "tubesage-backend"
+version = "0.1.0"
+description = "Backend for TubeSage Intelligence Engine"
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fastapi = "^0.109.0"
+uvicorn = {extras = ["standard"], version = "^0.27.0"}
+sqlalchemy = "^2.0.25"
+asyncpg = "^0.29.0"
+google-auth-oauthlib = "^1.2.0"
+google-api-python-client = "^2.116.0"
+redis = "^5.0.1"
+pydantic-settings = "^2.1.0"
+python-dotenv = "^1.0.1"
+spacy = "^3.7.2"
+scikit-learn = "^1.4.0"
+sentence-transformers = "^2.3.1"
+numpy = "^1.26.3"
+pandas = "^2.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
