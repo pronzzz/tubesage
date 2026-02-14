@@ -35,61 +35,51 @@ The frontend is a modern React application using:
 - **Framer Motion**: For smooth animations.
 - **Glassmorphism**: For a premium, modern UI aesthetic.
 
-## Feature Walkthrough & Verification
+## Core Features Deep Dive
 
-The project includes a set of verification scripts to demonstrate and test each core component.
+This section provides an in-depth look at the capabilities of each core component.
 
-### Phase 1: Setup Verification (`verify_setup.py`)
+### 1. Intelligence Engine
 
-Ensures that the environment is correctly configured.
+The brain of TubeSage, responsible for understanding content semantics.
 
-- Loads configuration settings.
-- Verifies database models (`Channel`, `Video`, `MetricTimeSeries`).
-- Checks YouTube Client and Database connectivity modules.
+- **NLP Parsing**: Extracts key entities and topics from video titles/descriptions.
+- **Semantic Embeddings**: Vectorized representations of content allow for "meaning-based" search rather than just keyword matching.
 
-### Phase 2: Intelligence Engine (`verify_phase2.py`)
-
-Tests the NLP and Embedding capabilities.
-
-- Verifies `spaCy` installation.
-- Verifies `sentence_transformers` installation.
-- Loads the `analyzer` module.
-- *Note*: Requires model weights to be downloaded for full functionality.
-
-### Phase 3: Trend Detection (`verify_phase3.py`)
+### 2. Trend Detection
 
 Validates the mathematics behind trend analysis.
 
-- **Velocity Calculator**: Tests calculation of view growth over time.
+- **Velocity Calculator**: Calculates view growth over time to determine momentum.
 - **Trend Detector**: Identifies if a series is "Accelerating", "Stable", or "Decelerating".
 
-### Phase 4: Predictive Modeling (`verify_phase4.py`)
+### 3. Predictive Modeling
 
-Demonstrates the forecasting engine.
+The forecasting engine that powers decision making.
 
-- **Growth Predictor**: projects future views based on historical data.
+- **Growth Predictor**: Projects future views based on historical data using linear regression.
 - **Strategy Simulator**: Simulates scenarios like "Doubling upload frequency" and estimates the impact on views (e.g., using elasticity models).
 
-### Phase 5: Competitor Intelligence (`verify_phase5.py`)
+### 4. Competitor Intelligence
 
-Tests the comparative analysis algorithms.
+Comparative analysis identifying market opportunities.
 
 - **Overlap Analyzer**: Calculates how similar two channels are based on topic intersection.
 - **Gap Detector**: Identifies topics present in a competitor's channel but missing from yours.
 
-### Phase 6: Optimization & Quota Management (`verify_phase6.py`)
+### 5. Optimization & Quota Management
 
-Verifies the smart infrastructure that saves API costs.
+Smart infrastructure that saves API costs and ensures scalability.
 
-- **Smart Cache**: Checks if TTL adjusts dynamically (e.g., Viral = 1 hour, Stagnant = 7 days).
-- **Batch Scheduler**: Tests the ability to process multiple items in chunks to respect rate limits.
+- **Smart Cache**: Adjusts TTL dynamically (e.g., Viral content caches for 1 hour, Stagnant for 7 days).
+- **Batch Scheduler**: Processes API requests in optimal chunks to respect rate limits.
 
-### Phase 7: Recommendation Engine (`verify_phase7.py`)
+### 6. Recommendation Engine
 
 The final output of the system.
 
-- Generates actionable recommendations based on all previous analyses.
-- Sorts recommendations by "Impact Score" to prioritize high-value actions.
+- **Recommendation Generator**: Generates actionable recommendations based on all previous analyses.
+- **Impact Scoring**: Sorts recommendations by "Impact Score" to prioritize high-value actions.
 
 ## Getting Started
 
